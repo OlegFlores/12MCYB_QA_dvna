@@ -1,6 +1,9 @@
 version: 2
 updates:
-  - package-ecosystem: "" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "npm"  # Adjust to your package ecosystem (npm, pip, gem, etc.)
+    directory: "/"  # Adjust this path to cover all relevant dependencies
     schedule:
-      interval: "weekly"
+      interval: "daily"  # You can increase the frequency to check for updates more often
+    open-pull-requests-limit: 10  # A high value or leave it unset for no limit
+    labels:
+      - "dependabot"
